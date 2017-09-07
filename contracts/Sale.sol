@@ -1,5 +1,6 @@
 pragma solidity 0.4.11;
-import "./HumanStandardToken.sol";
+/*import "./HumanStandardToken.sol";*/
+import "./ERC661Token.sol";
 import "./Disbursement.sol";
 import "./Filter.sol";
 
@@ -19,7 +20,7 @@ contract Sale {
 
     address public owner;
     address public wallet;
-    HumanStandardToken public token;
+    ERC661Token public token;
     uint public price;
     uint public startBlock;
     uint public freezeBlock;
@@ -63,7 +64,7 @@ contract Sale {
 
     /// @dev Sale(): constructor for Sale contract
     /// @param _owner the address which owns the sale, can access owner-only functions
-    /// @param _wallet the sale's beneficiary address 
+    /// @param _wallet the sale's beneficiary address
     /// @param _tokenSupply the total number of AdToken to mint
     /// @param _tokenName AdToken's human-readable name
     /// @param _tokenDecimals the number of display decimals in AdToken balances
@@ -83,7 +84,7 @@ contract Sale {
     ) {
         owner = _owner;
         wallet = _wallet;
-        token = new HumanStandardToken(_tokenSupply, _tokenName, _tokenDecimals, _tokenSymbol);
+        token = new ERC661Token(_tokenSupply, _tokenName, _tokenDecimals, _tokenSymbol);
         price = _price;
         startBlock = _startBlock;
         freezeBlock = _freezeBlock;
@@ -99,10 +100,10 @@ contract Sale {
     function distributePreBuyersRewards(
         address[] _preBuyers,
         uint[] _preBuyersTokens
-    ) 
+    )
         public
         onlyOwner
-    { 
+    {
         assert(!preSaleTokensDisbursed);
 
         for(uint i = 0; i < _preBuyers.length; i++) {
@@ -121,10 +122,10 @@ contract Sale {
         address[] _founders,
         uint[] _foundersTokens,
         uint[] _founderTimelocks
-    ) 
+    )
         public
         onlyOwner
-    { 
+    {
         assert(preSaleTokensDisbursed);
         assert(!foundersTokensDisbursed);
 
@@ -150,10 +151,10 @@ contract Sale {
             filters.push(filter);
             Disbursement vault = new Disbursement(filter, 1, _founderTimelocks[j]);
             // Give the disbursement contract the address of the token it disburses.
-            vault.setup(token);             
+            vault.setup(token);
             /* Give the filter contract the address of the disbursement contract
                it access controls */
-            filter.setup(vault);             
+            filter.setup(vault);
             // Transfer to the vault the tokens it is to disburse
             assert(token.transfer(vault, tokensPerTranch));
             TransferredFoundersTokens(vault, tokensPerTranch);

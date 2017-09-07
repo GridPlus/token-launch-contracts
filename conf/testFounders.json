@@ -6,39 +6,39 @@
   "founders": {
     "0": {
       "amount": "110000000000000000",
-      "address": "0x9a40017a3e1f13d93068ff601bb65cfaa66145ed"
+      "address": "0xba3e00c6f473880ed97c708344ab75af4ad90266"
     },
     "1": {
       "amount": "45000000000000000",
-      "address": "0xc5be24137584198a67d4df71f476f6d259ea3d59"
+      "address": "0x966d76c31c66afec7c41768d6c475e06157622d8"
     },
     "2": {
       "amount": "27000000000000000",
-      "address": "0x4f737ef1fc4b9f4e1b26a033c94530a8d87126b9"
+      "address": "0xb8d549dd432dcb9a2bbdd89c7981b6e5aa362342"
     },
     "3": {
       "amount": "18000000000000000",
-      "address": "0x1bdb9362a7079cc08ff24c09c52ea90a885e75e6"
+      "address": "0x37daacc442031856bf1f21d2a337b5c17709e13a"
     },
     "4": {
       "amount": "56500000000000000",
-      "address": "0x1258ca7cb167334a327ea919244eed687647c789"
+      "address": "0xeacdb5c9eddd9952f37b4e30e94736e1d64881bf"
     },
     "5": {
       "amount": "66000000000000000",
-      "address": "0xc7acf4a06b87563769b0bf36ca368d8bd28d409e"
+      "address": "0xfbd5afd4f90cc65315cc490f2dc4f3df3fd90739"
     },
     "6": {
       "amount": "12500000000000000",
-      "address": "0xf1374ac64c32ad3b098588f84cc9bb9d9da5e76e"
+      "address": "0xdd9539b068f137822f7d7249c81757e42a1f3f50"
     },
     "7": {
       "amount": "55000000000000000",
-      "address": "0x39be54dfb8e2a0e7c097a72e3dfb0d2efbac893e"
+      "address": "0x6c43e16ea1bad8daaad36f5fadc40d37bcb4e740"
     },
     "8": {
       "amount": "10000000000000000",
-      "address": "0x6eaa1626d3b55119b47f23020e1c358c08f04205"
+      "address": "0xe99558373d5eabd8ac835d4a959f17fa12f201e5"
     }
   }
 }
